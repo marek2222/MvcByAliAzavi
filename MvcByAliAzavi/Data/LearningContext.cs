@@ -8,5 +8,7 @@ namespace MvcByAliAzavi.Data
     public DbSet<Category>  Categories  { get; set; }
     public DbSet<Product>   Products    { get; set; }
     public DbSet<Product2>  Products2   { get; set; }
+
+    public DbSet<ProductSearchModels> ProductSearchModels { get; set; }
   }
 }
