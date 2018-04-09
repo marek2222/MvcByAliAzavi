@@ -175,6 +175,7 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Products2Controller.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Data\LearningContext.cs" />
     <Compile Include="Data\LearningContextInitializer.cs" />
@@ -187,6 +188,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Product2.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductModel2.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\ProductSearchModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -257,6 +259,8 @@
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products2\Index.cshtml" />
+    <Content Include="Views\Products2\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
