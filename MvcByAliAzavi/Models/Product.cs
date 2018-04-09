@@ -5,6 +5,7 @@ namespace MvcByAliAzavi.Models
 {
   public class Product
   {
+    [Key]
     public Int32 ProductId { get; set; }
 
     [Required]
