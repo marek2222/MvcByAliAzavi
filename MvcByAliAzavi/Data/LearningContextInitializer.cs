@@ -23,13 +23,6 @@ namespace MvcByAliAzavi.Data
       context.SaveChanges();
 
 
-      // add data into table and save to db
-      foreach (var category in categories)
-      {
-        context.Categories.Add(category);
-      }
-      context.SaveChanges();
-
       // Add records into Product table 
       var products = new List<Product>
       {
