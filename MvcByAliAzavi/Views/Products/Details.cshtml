@@ -1,0 +1,44 @@
+﻿@model MvcByAliAzavi.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+<h2>Product Details</h2>
+<hr />
+<div>
+  <div class="form-horizontal">
+    <div class="form-group">
+      @Html.LabelFor(m => m.ProductName, new { @class = "control-label col-md-2" })
+      <div class="col-md-10">
+        @Html.TextBoxFor(m => m.ProductName,
+                         new { @class = "form-control", @disabled = "disabled" })
+      </div>
+    </div>
+
+    <div class="form-group">
+      @Html.LabelFor(m => m.Price, new { @class = "control-label col-md-2" })
+      <div class="col-md-10">
+        @Html.TextBoxFor(m => m.Price,
+                new { @class = "form-control", @disabled = "disabled" })
+      </div>
+    </div>
+
+    <div class="form-group">
+      @Html.LabelFor(m => m.Price, new { @class = "control-label col-md-2" })
+      <div class="col-md-10">
+        @Html.TextBoxFor(m => m.CategoryId, ((String)ViewBag.Category),
+                new { @class = "form-control", @disabled = "disabled" })
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <img src="@Model.Thumb" alt="@Model.ProductName image" class="img-thumbnail" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-warning" })
+      </div>
+    </div>
+  </div>
+</div>
