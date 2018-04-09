@@ -19,5 +19,11 @@ namespace MvcByAliAzavi.Models
     [Required]
     [Display(Name = "Category")]
     public Int32 CategoryId { get; set; }
+
+    public String Image { get; set; }
+
+    public String Thumb { get; set; }
+
+    public virtual Category Categories { get; set; }
   }
 }
