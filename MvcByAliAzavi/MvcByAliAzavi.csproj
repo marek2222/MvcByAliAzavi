@@ -182,6 +182,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Product2.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductSearchModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
