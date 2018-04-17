@@ -1,10 +1,7 @@
 ﻿using MvcByAliAzavi.Data;
 using MvcByAliAzavi.Models;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MvcByAliAzavi.Controllers
@@ -35,8 +32,20 @@ namespace MvcByAliAzavi.Controllers
     [ValidateAntiForgeryToken]
     public ActionResult Create(ProductModel2 model)
     {
-      // removed the code for checking image type and sizes
-      // See previous article, if you need that code
+      var imageTypes = new string[]{
+                    "image/gif",
+                    "image/jpeg",
+                    "image/pjpeg",
+                    "image/png"
+                };
+      if (model.ImageUpload == null || model.ImageUpload.ContentLength == 0)
+      {
+        ModelState.AddModelError("ImageUpload", "This field is required");
+      }
+      else if (!imageTypes.Contains(model.ImageUpload.ContentType))
+      {
+        ModelState.AddModelError("ImageUpload", "Please choose either a GIF, JPG or PNG image.");
+      }
 
       if (ModelState.IsValid)
       {
